@@ -29,7 +29,7 @@ export const ListPokemon = ({ image, id, name, types, abilities, stats, hpStats,
                 <td //Name
                     maxWidth={144}
                     style={{ textTransform: 'capitalize', verticalAlign: 'middle' }}>
-                    <Link to={`pokemonDataBase_byThiagoCosta/pokemon/${id}/`}
+                    <Link to={`/pokemonDataBase_byThiagoCosta/pokemon/${id}/`}
                         style={{
                             cursor: 'pointer',
                             textDecoration: 'none',
