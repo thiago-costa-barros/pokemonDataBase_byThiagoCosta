@@ -11,15 +11,15 @@ export const MenuNav = () => {
         <>
             <Navbar bg="dark" variant="light" expand="lg">
                 <Container>
-                    <Link to="/">
+                    <Link to="/pokemonDataBase_byThiagoCosta/">
                         <img src='https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo-4-1.png' alt='PokemonLogo' height={70} />
                     </Link>
                     <Nav style={{ justifyContent: 'flex-end' }}>
-                        <Link to="/"
+                        <Link to="/pokemonDataBase_byThiagoCosta"
                             style={{ textDecoration: 'none', color: '#f5f5f9', fontWeight: 'bold', marginLeft: '12px' }}>
                             Home
                         </Link>
-                        <Link to="/pokedex"
+                        <Link to="/pokemonDataBase_byThiagoCosta/pokedex"
                             style={{ textDecoration: 'none', color: '#f5f5f9', fontWeight: 'bold', marginLeft: '12px' }}>
                             Pokedex
                         </Link >
