@@ -26,9 +26,9 @@ function App() {
       </header>
       <div className="App">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/pokedex" element={<PokedexPage />} />
-          <Route path="/pokemon/:id" element={<PokemonPage />} />
+          <Route path="/pokemonDataBase_byThiagoCosta" element={<HomePage />} />
+          <Route path="/pokemonDataBase_byThiagoCosta/pokedex" element={<PokedexPage />} />
+          <Route path="/pokemonDataBase_byThiagoCosta/pokemon/:id" element={<PokemonPage />} />
         </Routes>
       </div>
     </BrowserRouter>
