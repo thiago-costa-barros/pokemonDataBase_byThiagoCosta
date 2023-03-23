@@ -39,6 +39,44 @@ export function useFetchById() {
     return { pokemon }
 }
 
+//Previous Pokemon
+
+export function useFetchPrevious() {
+    var { id } = useParams()
+    var prevId = parseInt(id)
+    const [previous, setPrevious] = useState()
+
+    const getPokemonPrevious = () => {
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${(prevId-1)}`)
+            .then((res) => setPrevious(res))
+            .catch((err) => console.log(err))
+    }
+
+    useEffect(() => {
+        getPokemonPrevious(`https://pokeapi.co/api/v2/pokemon/${(prevId-1)}`)
+    }, [])
+    return { previous }
+}
+
+// Next Pokemon
+
+export function useFetchNext() {
+    var { id } = useParams()
+    var nextId = parseInt(id)
+    const [next, setNext] = useState()
+
+    const getPokemonNext = () => {
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${nextId+1}`)
+            .then((res) => setNext(res))
+            .catch((err) => console.log(err))
+    }
+
+    useEffect(() => {
+        getPokemonNext(`https://pokeapi.co/api/v2/pokemon/${(nextId+1)}`)
+    }, [])
+    return { next }
+}
+
 // Gen 1 pokedex
 export function useFetchGen1() {
     const [gen1, setGen1] = useState(null)
